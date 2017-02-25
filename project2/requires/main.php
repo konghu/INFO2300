@@ -31,33 +31,41 @@ function search($title, $singer, $category, $ratings, $comments, $array){
     $commentsMatches = array();
 
     for ($i1 = 0; $i1 < count($array); $i1++) {
-        // Title field
+
         if ((!empty($title)) && (stripos($array[$i1][0], $title) !== false)) {
-            $titleMatches = $array[$i1];
+
+            array_unshift($titleMatches, $array[$i1]);
         }
         if ((!empty($singer)) && (stripos($array[$i1][1], $singer) !== false)) {
-            $singerMatches = $array[$i1];
+
+            array_unshift($singerMatches, $array[$i1]);
         }
         if ((!empty($category)) && (stripos($array[$i1][2], $category) !== false)) {
-            $categoryMatches = $array[$i1];
+
+            array_unshift($categoryMatches, $array[$i1]);
         }
         if ((!empty($ratings)) && (stripos($array[$i1][3], $ratings) !== false)) {
-            $ratingsMatches = $array[$i1];
+
+            array_unshift($ratingsMatches, $array[$i1]);
         }
         if ((!empty($comments)) && (stripos($array[$i1][4], $comments) !== false)) {
-            $commentsMatches = $array[$i1];
+
+            array_unshift($commentsMatches, $array[$i1]);
+
         }
     }
 
     $args = array();
-    if ( !empty($titleMatches) ) array_unshift($args, $titleMatches);
-    if ( !empty($singerMatches) ) array_unshift($args,  $singerMatches);
-    if ( !empty($categoryMatches) ) array_unshift($args, $categoryMatches);
-    if ( !empty($ratingsMatches) ) array_unshift($args ,$ratingsMatches);
-    if ( !empty($commentsMatches) ) array_unshift($args, $commentsMatches);
 
-    return array_unique($args, SORT_REGULAR);
+    if ( !empty($titleMatches) ) $args = array_merge($args, $titleMatches);
+    if ( !empty($singerMatches) )$args = array_merge($args, $singerMatches);
+    if ( !empty($categoryMatches) ) $args = array_merge($args, $categoryMatches);
+    if ( !empty($ratingsMatches) ) $args = array_merge($args, $ratingsMatches);
+    if ( !empty($commentsMatches) ) $args = array_merge($args,$commentsMatches);
 
+    //remove duplicate arrays and reindex by keys
+    sort(array_unique($args, SORT_REGULAR));
+    return ($args);
 }
 
 function printResults($songs) {
