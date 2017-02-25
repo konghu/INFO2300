@@ -1,0 +1,43 @@
+#top {
+    background-color: lightgray;
+    height: 10em;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+#banner {
+    background-color: black;
+    color: #ffffff;
+    height: 5em;
+    width: 100%;
+}
+
+#global_nav a:link {
+    color: #000000;
+}
+
+#global_nav a:hover {
+    color: #2c7bb6;
+}
+#global_nav{border-bottom: groove;}
+
+#header{text-align: center;
+    font-size: 2em;
+    padding-top: .6em;
+    }
+
+
+/*li {list-style-type: none;*/
+    /*display: inline-block;*/
+    /*text-align: center;}*/
+
+.nav_span{
+    font-size: 1.5em;
+    margin-left: 5em;
+    padding-top: 0.8em;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+}
+

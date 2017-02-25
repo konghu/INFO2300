@@ -1,0 +1,127 @@
+body, html {
+    /*font-family: Impact, Charcoal, sans-serif;*/
+    background-color: rgb(66, 75, 89);
+}
+
+.hidden{display: none;}
+
+.header {
+    height: 60px;
+    box-shadow: 1px 1px 0px 0px rgba(250, 250, 250, 0.1 );
+}
+
+.slab-serif {
+    font-family: Impact, Charcoal, sans-serif;
+    font-style: normal;
+}
+
+.sans-serif {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: normal;
+}
+
+
+.small {
+    font-size: .75em;
+}
+
+.big {
+    font-size: 1.5em;
+}
+
+.link, .link:hover, .link:visited, .link:active {
+    text-decoration: none;
+}
+
+.sections {
+    display: inline;
+    margin-left:20px;
+}
+.section {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    height: 65px;
+    line-height: 65px;
+    vertical-align: middle;
+    color:rgb(230,200,200);
+}
+
+.song{
+    padding-left: 100px;
+}
+
+.title {
+    font-family: Impact, Charcoal, sans-serif;
+    font-weight: 100;
+    color:rgba(230,200,200, 0.4);
+    font-size:1.8em;
+}
+
+.comments {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color:rgb(50,50,50);
+    font-size:.95em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    width: 100%;
+}
+
+.song {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(50,50,50, .25);
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
+
+.info {
+    display: block;
+    padding-bottom: .5em;
+}
+
+.category, .singer, .info, .input {
+    font-family: "Lucida Grande", sans-serif;
+    color: rgba(50,50,50, .5);
+    font-weight: 100;
+    display: inline-block;
+}
+
+.sectionColor {
+    text-decoration: none;
+    color: rgba(230, 200, 200, .5);
+}
+
+.alert {
+    color: rgb(0,0,0);
+}
+
+.notice {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 35px;
+}
+
+.right {
+    float: right;
+}
+
+.image{
+    width: 25%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 200px;
+}
+
+.input {
+    display: block;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid rgba(50,50,50, .25);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 55%;
+}

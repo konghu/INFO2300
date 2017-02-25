@@ -1,0 +1,11 @@
+#panda1{
+    margin-top: 8em;
+    text-align: center;
+    display: inline-block;
+    width: 70%;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+body{
+    background-color: lightgray;
+}
